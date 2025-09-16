@@ -206,34 +206,7 @@ Aplikasi ini dirancang sesuai prinsip-prinsip Islam:
 - ✅ Mempromosikan akuntabilitas dan komunitas
 - ✅ Bebas dari unsur riba, judi, atau haram lainnya
 - ✅ Content yang sopan dan sesuai adab Islam
-
-## 🚀 Deployment
-
-### Bolt Hosting (Recommended)
-Aplikasi sudah di-deploy di:
-- **URL**: https://islamic-spiritual-jo-874m.bolt.host
-- **Auto-deploy**: Setiap update otomatis deploy
-- **SSL**: HTTPS enabled secara default
-- **CDN**: Global content delivery untuk performance
-
-### Manual Deployment Options
-
-#### Netlify
-1. Connect repository ke Netlify
-2. Build command: `npm run build`
-3. Publish directory: `dist`
-4. Auto-deploy on push enabled
-
-#### Vercel
-1. Import project di Vercel dashboard
-2. Zero-config deployment (auto-detect Vite)
-3. Deploy dengan satu klik
-
-#### Traditional Hosting
-1. Build: `npm run build`
-2. Upload folder `dist/` ke hosting provider
-3. Configure proper SPA routing
-
+- 
 ## 📱 Browser Support
 
 ### Desktop

@@ -1,77 +1,90 @@
 # Taubat & Hijrah - Islamic Spiritual Journey Tracker
 
-A beautiful, comprehensive web application designed to help Muslims maintain consistency in their spiritual journey of repentance (taubat) and self-improvement (hijrah).
+Aplikasi web komprehensif yang membantu umat Muslim menjaga konsistensi dalam perjalanan spiritual taubat dan hijrah dari maksiat, khususnya dalam menjauhi zina dan dosa-dosa lainnya.
 
-## Features
+## ✨ Fitur Utama
 
-### 🕌 Core Spiritual Tracking
-- **Daily Prayer Tracker**: Track all five daily prayers (Fajr, Dhuhr, Asr, Maghrib, Isha)
-- **Quran Reading**: Monitor daily Quran recitation
-- **Dhikr & Remembrance**: Track dhikr sessions and istighfar
-- **Charitable Acts**: Record daily acts of kindness and charity
-- **Personal Reflection**: Daily spiritual journal for self-reflection
+### 🕌 **Tracking Ibadah Harian**
+- **Shalat Fardhu**: Tracking 5 waktu shalat wajib (Subuh, Dzuhur, Ashar, Maghrib, Isya)
+- **Shalat Sunnah**: Dhuha, Tahajud, Witir, Taubat, dan Rawatib
+- **Validasi Waktu**: Sistem hanya mengizinkan absen shalat setelah waktu masuk
+- **Niat Shalat**: Dilengkapi bacaan niat dalam Arab, Latin, dan artinya
 
-### 📱 Smart Features
-- **Progress Visualization**: Beautiful circular progress indicators
-- **Streak Counter**: Maintain and visualize consistency streaks
-- **Prayer Times**: Display local prayer times with location detection
-- **Islamic Calendar**: Show current Hijri date alongside Gregorian
-- **Motivational Quotes**: Daily verses from Quran and authentic Hadith
+### 📿 **Amalan Spiritual**
+- **Tilawah Al-Quran**: Tracking bacaan harian Al-Quran
+- **Dzikir & Istighfar**: Monitor sesi dzikir dan istighfar
+- **Tasbih Digital**: Counter tasbih dengan berbagai pilihan dzikir
+- **Doa Harian**: Pengingat untuk membaca doa-doa harian
+- **Amal Kebaikan**: Tracking sedekah dan perbuatan baik lainnya
 
-### 🤖 Telegram Integration
-- **Daily Reports**: Automated progress reports sent to Telegram
-- **Accountability Partner**: Regular check-ins and reminders
-- **Motivational Messages**: Inspirational Islamic content delivery
-- **Real-time Updates**: Instant notifications for spiritual milestones
+### 🧭 **Fitur Navigasi Islami**
+- **Arah Kiblat**: Kompas kiblat otomatis berdasarkan lokasi GPS
+- **Waktu Shalat**: Jadwal shalat akurat sesuai koordinat lokasi
+- **Zona Waktu**: Support WIB, WITA, dan WIT
+- **Deteksi Otomatis**: Auto-detect timezone berdasarkan longitude
 
-### 🎨 Islamic Design
-- **Authentic Aesthetics**: Islamic geometric patterns and Arabic calligraphy
-- **Calming Colors**: Peaceful greens, blues, and earth tones
-- **Responsive Design**: Beautiful interface across all devices
-- **Cultural Sensitivity**: Respectful representation of Islamic values
+### 📊 **Progress & Analytics**
+- **Visualisasi Progress**: Circular progress indicators yang indah
+- **Streak Counter**: Hitung hari berturut-turut konsisten
+- **Daily Reports**: Laporan harian lengkap
+- **Motivational Quotes**: Ayat Quran dan hadits harian
 
-## Telegram Bot Setup
+### 🤖 **Integrasi Telegram Bot**
+- **Laporan Otomatis**: Kirim progress harian ke Telegram
+- **Motivasi Spiritual**: Pesan motivasi berbasis Al-Quran dan Hadits
+- **Pengingat**: Notifikasi untuk menjaga konsistensi
+- **Real-time Updates**: Update milestone spiritual instant
 
-### Prerequisites
-1. Create a Telegram Bot:
-   - Message [@BotFather](https://t.me/BotFather) on Telegram
-   - Use `/newbot` command to create a new bot
-   - Save your bot token
+### 🎨 **Desain Islami**
+- **Estetika Autentik**: Pola geometris dan kaligrafi Arab
+- **Warna Sejuk**: Palet hijau, biru, dan earth tones
+- **Responsive Design**: Optimal di semua perangkat
+- **Kulturally Sensitive**: Representasi nilai-nilai Islam yang sopan
 
-2. Get Your Chat ID:
-   - Start a conversation with your bot
-   - Send any message to the bot
-   - Visit `https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates`
-   - Find your chat ID in the response
+## 🔧 Setup Telegram Bot
 
-### Configuration
-The application is pre-configured with:
-- **Bot Token**: `6968952940:AAHSjZqU2tuQ0UPLMB_WCtQ_quFxxRVNPJU`
-- **Chat ID**: `965058766`
+### Prasyarat
+Bot sudah tersedia dan siap digunakan:
+- **Bot Username**: @Arcyyybot
+- **Bot Link**: https://t.me/Arcyyybot
 
-To use your own bot:
-1. Open `src/services/telegramService.ts`
-2. Replace the `TELEGRAM_BOT_TOKEN` with your token
-3. Replace the `CHAT_ID` with your chat ID
+### Cara Mendapatkan Chat ID
 
-### Bot Commands
-Set these commands for your bot using BotFather:
+1. **Buka bot Telegram**: 
+   - Klik link: https://t.me/Arcyyybot
+   - Atau cari `@Arcyyybot` di Telegram
+
+2. **Mulai chat dengan bot**:
+   - Klik tombol **START** atau kirim `/start`
+   - ⚠️ **Penting**: Bot tidak bisa mengirim pesan jika belum di-start
+
+3. **Dapatkan Chat ID**:
+   - Kirim pesan `/id` ke bot
+   - Bot akan membalas dengan Chat ID Anda
+   - Chat ID berbentuk angka (contoh: `965058766`)
+
+4. **Gunakan di Aplikasi**:
+   - Copy Chat ID (hanya angka saja)
+   - Paste ke kolom Chat ID di aplikasi
+   - Klik **Hubungkan**
+
+### Perintah Bot
 ```
-/start - Start using the spiritual tracker
-/report - Get today's progress report
-/motivation - Receive motivational message
-/reminder - Set up daily reminders
-/help - Show available commands
+/start - Memulai bot dan aktivasi fitur
+/id - Mendapatkan Chat ID untuk koneksi
+/help - Bantuan penggunaan bot
 ```
 
-## Installation & Development
+## 🚀 Installation & Development
 
 ### Requirements
-- Node.js 16+ 
-- npm or yarn
+- Node.js 18+
+- npm atau yarn
+- Browser dengan support GPS (untuk fitur kiblat)
 
-### Setup
-1. **Clone the repository**:
+### Setup Lokal
+
+1. **Clone repository**:
    ```bash
    git clone <repository-url>
    cd taubat-hijrah-tracker
@@ -87,176 +100,241 @@ Set these commands for your bot using BotFather:
    npm run dev
    ```
 
-4. **Build for production**:
+4. **Build untuk production**:
    ```bash
    npm run build
    ```
 
-## Project Structure
+5. **Preview production build**:
+   ```bash
+   npm run preview
+   ```
+
+### Build Commands
+```bash
+npm run dev      # Development server
+npm run build    # Production build
+npm run preview  # Preview production build
+npm run lint     # ESLint check
+```
+
+## 📁 Struktur Proyek
 
 ```
 src/
-├── components/          # React components
-│   ├── Header.tsx       # Main header with Islamic calendar
-│   ├── HabitTracker.tsx # Daily spiritual practices tracker
-│   ├── ProgressSummary.tsx # Progress visualization
-│   ├── MotivationalQuotes.tsx # Quranic verses and Hadith
-│   ├── PrayerTimes.tsx  # Local prayer times display
-│   ├── ReflectionJournal.tsx # Personal reflection journal
-│   └── TelegramIntegration.tsx # Telegram bot controls
-├── services/            # API services
-│   └── telegramService.ts # Telegram Bot API integration
-├── utils/              # Utility functions
-│   └── storage.ts      # Local storage management
-├── types/              # TypeScript type definitions
-│   └── index.ts        # Type definitions
-├── styles/             # Styling
-│   └── islamic-patterns.css # Islamic design patterns
-└── App.tsx             # Main application component
+├── components/              # React components
+│   ├── Header.tsx          # Header dengan kalender Hijriyah
+│   ├── HabitTracker.tsx    # Tracker ibadah harian
+│   ├── ProgressSummary.tsx # Visualisasi progress
+│   ├── MotivationalQuotes.tsx # Ayat & hadits motivasi
+│   ├── PrayerTimes.tsx     # Jadwal waktu shalat
+│   ├── QiblaDirection.tsx  # Kompas arah kiblat
+│   ├── TasbihCounter.tsx   # Counter tasbih digital
+│   ├── ReflectionJournal.tsx # Jurnal muhasabah
+│   ├── TelegramIntegration.tsx # Kontrol Telegram bot
+│   └── NotificationBanner.tsx # Banner notifikasi
+├── services/               # API services
+│   └── telegramService.ts  # Telegram Bot API
+├── utils/                  # Utility functions
+│   └── storage.ts          # localStorage management
+├── types/                  # TypeScript definitions
+│   └── index.ts            # Type definitions
+├── styles/                 # Styling
+│   └── islamic-patterns.css # Pola desain Islami
+└── App.tsx                 # Komponen utama aplikasi
 ```
 
-## Customization
+## ⚙️ Konfigurasi
 
-### Adding New Habits
-To add new spiritual practices:
+### Telegram Bot Configuration
+Bot sudah dikonfigurasi dengan:
+- **Bot Token**: Sudah di-embed dalam kode
+- **API Endpoint**: https://api.telegram.org/bot{token}
+- **Supported Commands**: /start, /id, /help
 
-1. **Update types** in `src/types/index.ts`:
-   ```typescript
-   export interface Habit {
-     // ... existing habits
-     newHabit: boolean;
-   }
-   ```
+### Prayer Times API
+Menggunakan Aladhan API:
+- **Endpoint**: https://api.aladhan.com/v1/timings
+- **Method**: 20 (Institute of Geophysics, University of Tehran)
+- **Auto Timezone**: Berdasarkan longitude koordinat
 
-2. **Update habit configuration** in `src/components/HabitTracker.tsx`:
-   ```typescript
-   const habitConfig = [
-     // ... existing habits
-     { 
-       key: 'newHabit', 
-       label: 'New Spiritual Practice', 
-       icon: YourIcon, 
-       color: 'text-color-600', 
-       arabic: 'العربية' 
-     }
-   ];
-   ```
+### Geolocation
+- **High Accuracy**: Enabled untuk precision tinggi
+- **Timeout**: 15 detik
+- **Cache**: 5 menit untuk performa
 
-### Prayer Time Integration
-For accurate prayer times, integrate with APIs like:
-- [Aladhan API](https://aladhan.com/prayer-times-api)
-- [Islamic Finder API](https://www.islamicfinder.org/api/)
-- [PrayTimes.js](http://praytimes.org/code/)
+## 🌟 Fitur Unggulan
 
-Example integration:
-```typescript
-const fetchPrayerTimes = async (latitude: number, longitude: number) => {
-  const response = await fetch(
-    `http://api.aladhan.com/v1/timings?latitude=${latitude}&longitude=${longitude}&method=2`
-  );
-  const data = await response.json();
-  return data.data.timings;
-};
-```
+### 1. **Validasi Waktu Shalat**
+- Absen shalat hanya bisa dilakukan setelah waktu masuk
+- Countdown timer untuk shalat selanjutnya
+- Validasi khusus untuk shalat malam (Tahajud, Witir)
+- Warning untuk waktu-waktu terlarang shalat sunnah
 
-### Styling Customization
-- **Colors**: Modify CSS variables in `src/styles/islamic-patterns.css`
-- **Patterns**: Customize geometric patterns using CSS background properties
-- **Typography**: Update Arabic font imports for different calligraphy styles
-- **Responsive**: Adjust breakpoints in Tailwind configuration
+### 2. **Kompas Kiblat Interaktif**
+- Real-time compass dengan animasi smooth
+- Akurasi tinggi berdasarkan GPS coordinates
+- Visual indicator arah mata angin
+- Support device orientation untuk mobile
 
-### Telegram Features
-Extend Telegram functionality:
+### 3. **Progress Tracking Comprehensive**
+- Daily completion percentage
+- Streak counter untuk konsistensi
+- Historical data dengan localStorage
+- Visual feedback dengan colors & animations
 
-1. **Scheduled Reminders**:
-   ```typescript
-   const scheduleReminders = () => {
-     // Set up cron jobs for regular reminders
-     // Remind before each prayer time
-     // Weekly progress summaries
-   };
-   ```
+### 4. **Motivational System**
+- Rotating quotes dari Al-Quran dan Hadits Sahih
+- Context-aware notifications
+- Reminder berbasis timing
+- Arabic text dengan transliterasi dan terjemahan
 
-2. **Group Integration**:
-   ```typescript
-   const sendToGroup = async (message: string, groupChatId: string) => {
-     // Send messages to Islamic study groups
-     // Share progress with accountability partners
-   };
-   ```
+## 🔒 Privacy & Keamanan
 
-## Deployment
+- **Data Lokal**: Semua data personal tersimpan di browser
+- **No Tracking**: Tidak ada analytics atau tracking scripts
+- **Secure API**: Telegram communication encrypted
+- **No Data Mining**: Tidak mengumpulkan data personal
+- **Open Source**: Kode transparan dan dapat diaudit
 
-### Netlify (Recommended)
-1. Connect your repository to Netlify
-2. Set build command: `npm run build`
-3. Set publish directory: `dist`
-4. Deploy automatically on push
+## 🕌 Compliance Syariah
 
-### Vercel
-1. Import project in Vercel dashboard
-2. Configure build settings (automatic for Vite)
-3. Deploy with zero configuration
+Aplikasi ini dirancang sesuai prinsip-prinsip Islam:
+- ✅ Mendorong amal saleh dan pertumbuhan spiritual
+- ✅ Menggunakan ayat Quran dan hadits sahih
+- ✅ Menghormati kalender dan waktu shalat Islam
+- ✅ Mempromosikan akuntabilitas dan komunitas
+- ✅ Bebas dari unsur riba, judi, atau haram lainnya
+- ✅ Content yang sopan dan sesuai adab Islam
 
-### Traditional Hosting
-1. Build the project: `npm run build`
-2. Upload `dist/` folder to your hosting provider
-3. Ensure proper routing for SPA
+## 🚀 Deployment
 
-## Privacy & Security
+### Bolt Hosting (Recommended)
+Aplikasi sudah di-deploy di:
+- **URL**: https://islamic-spiritual-jo-874m.bolt.host
+- **Auto-deploy**: Setiap update otomatis deploy
+- **SSL**: HTTPS enabled secara default
+- **CDN**: Global content delivery untuk performance
 
-- **Data Storage**: All personal data stored locally in browser
-- **Telegram**: Only sends data you explicitly share
-- **No Tracking**: No analytics or tracking scripts
-- **Open Source**: Fully transparent codebase
+### Manual Deployment Options
 
-## Islamic Compliance
+#### Netlify
+1. Connect repository ke Netlify
+2. Build command: `npm run build`
+3. Publish directory: `dist`
+4. Auto-deploy on push enabled
 
-This application is designed with Islamic principles in mind:
-- ✅ Encourages good deeds and spiritual growth
-- ✅ Uses authentic Quranic verses and verified Hadith
-- ✅ Respects Islamic calendar and prayer times
-- ✅ Promotes accountability and community
-- ✅ Free from interest (riba) or gambling elements
+#### Vercel
+1. Import project di Vercel dashboard
+2. Zero-config deployment (auto-detect Vite)
+3. Deploy dengan satu klik
 
-## Contributing
+#### Traditional Hosting
+1. Build: `npm run build`
+2. Upload folder `dist/` ke hosting provider
+3. Configure proper SPA routing
 
-We welcome contributions that enhance the spiritual journey experience:
+## 📱 Browser Support
 
-1. **Fork the repository**
-2. **Create feature branch**: `git checkout -b feature/islamic-calendar`
-3. **Make changes** following Islamic guidelines
-4. **Test thoroughly** with various use cases
-5. **Submit pull request** with clear description
+### Desktop
+- ✅ Chrome 90+
+- ✅ Firefox 88+
+- ✅ Safari 14+
+- ✅ Edge 90+
+
+### Mobile
+- ✅ Chrome Mobile 90+
+- ✅ Safari iOS 14+
+- ✅ Samsung Internet 15+
+- ✅ Firefox Mobile 88+
+
+### Required Features
+- **Geolocation API**: Untuk kiblat dan waktu shalat
+- **Device Orientation**: Untuk compass (optional)
+- **Local Storage**: Untuk menyimpan progress
+- **Fetch API**: Untuk Telegram dan prayer times
+
+## 🤝 Contributing
+
+Kontribusi yang meningkatkan pengalaman spiritual sangat diterima:
+
+### Cara Berkontribusi
+1. **Fork repository**
+2. **Buat feature branch**: `git checkout -b feature/islamic-calendar`
+3. **Implement changes** sesuai guidelines Islam
+4. **Test thoroughly** dengan berbagai use case
+5. **Submit pull request** dengan deskripsi jelas
 
 ### Contribution Guidelines
-- Ensure all Islamic content is authentic and properly sourced
-- Maintain respectful and appropriate language
-- Test Telegram integration thoroughly
-- Update documentation for new features
-- Follow existing code style and patterns
+- Pastikan semua konten Islam autentik dan bersumber sahih
+- Gunakan bahasa yang sopan dan sesuai adab
+- Test integrasi Telegram secara menyeluruh
+- Update dokumentasi untuk fitur baru
+- Follow existing code style dan patterns
+- Tidak menambahkan konten yang bertentangan dengan syariah
 
-## Support & Community
+## 🐛 Troubleshooting
 
-- **Issues**: Report bugs or request features on GitHub
-- **Discussions**: Join community discussions for Islamic tech
-- **Documentation**: Contribute to docs and translations
-- **Sharing**: Help spread awareness in the Muslim community
+### Telegram Bot Issues
+**Problem**: "Unauthorized" error
+- **Solution**: Pastikan sudah `/start` bot terlebih dahulu
 
-## License
+**Problem**: "Chat not found"
+- **Solution**: Verifikasi Chat ID benar dan bot tidak di-block
 
-This project is open source and available under the [MIT License](LICENSE).
+**Problem**: Permission denied
+- **Solution**: Check browser permission untuk notifications
 
-## Acknowledgments
+### Geolocation Issues
+**Problem**: "Location access denied"
+- **Solution**: Enable location permission di browser settings
 
-- Islamic scholars for guidance on spiritual practices
-- Telegram Bot API for communication features  
-- Prayer time calculation algorithms
-- Islamic geometric art inspiration
-- Open source contributors and testers
+**Problem**: "Location timeout"
+- **Solution**: Coba di area dengan GPS signal baik
+
+**Problem**: Inaccurate qibla direction
+- **Solution**: Calibrate device compass, check GPS accuracy
+
+### Performance Issues
+**Problem**: Slow loading
+- **Solution**: Clear browser cache, check internet connection
+
+**Problem**: High memory usage
+- **Solution**: Close other tabs, restart browser
+
+## 📞 Support & Community
+
+### Mendapatkan Bantuan
+- **Issues**: Laporkan bug di GitHub Issues
+- **Discussions**: Join community discussions
+- **Documentation**: Baca dokumentasi lengkap
+- **Telegram**: Contact melalui bot untuk support
+
+### Community Guidelines
+- Hormati sesama pengguna dan nilai-nilai Islam
+- Berikan feedback yang konstruktif
+- Share pengalaman positif dalam perjalanan spiritual
+- Bantu sesama dalam belajar dan berkembang
+
+## 📜 License
+
+Project ini open source dan tersedia di bawah [MIT License](LICENSE).
+
+## 🙏 Acknowledgments
+
+- Para ulama dan ustadz yang memberikan guidance spiritual
+- Telegram Bot API untuk fitur komunikasi
+- Aladhan API untuk calculation waktu shalat
+- Islamic geometric art untuk inspirasi desain
+- Open source community dan contributors
+- Beta testers dan early adopters
+
+## 🤲 Doa Penutup
+
+**Semoga Allah SWT menerima usaha kita dan menjadikan aplikasi ini bermanfaat bagi umat Islam dalam menjaga diri dari maksiat dan mendekatkan diri kepada-Nya. Aamiin.**
 
 ---
 
-**May Allah (SWT) accept our efforts and make this tool beneficial for the Ummah. Ameen.**
+*"Dan barangsiapa bertakwa kepada Allah niscaya Dia akan mengadakan baginya jalan keluar."* - **QS. At-Talaq: 2**
 
-*"And whoever relies upon Allah - then He is sufficient for him. Indeed, Allah will accomplish His purpose."* - Quran 65:3
+**Jazakallahu Khairan** untuk menggunakan aplikasi ini dalam perjalanan spiritual Anda! 🌟

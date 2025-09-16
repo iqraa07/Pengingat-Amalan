@@ -1,0 +1,330 @@
+/* Arabic Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;500;600;700&display=swap');
+
+.arabic-font {
+  font-family: 'Scheherazade New', 'Amiri', serif;
+  font-weight: 500;
+  direction: rtl;
+  text-align: right;
+}
+
+/* Islamic Geometric Pattern Overlay */
+.islamic-pattern-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.03;
+  background-image: 
+    radial-gradient(circle at 25% 25%, transparent 20%, rgba(16, 185, 129, 0.1) 20.5%, rgba(16, 185, 129, 0.1) 70%, transparent 70.5%),
+    radial-gradient(circle at 75% 25%, transparent 20%, rgba(14, 116, 144, 0.1) 20.5%, rgba(14, 116, 144, 0.1) 70%, transparent 70.5%),
+    radial-gradient(circle at 25% 75%, transparent 20%, rgba(16, 185, 129, 0.1) 20.5%, rgba(16, 185, 129, 0.1) 70%, transparent 70.5%),
+    radial-gradient(circle at 75% 75%, transparent 20%, rgba(14, 116, 144, 0.1) 20.5%, rgba(14, 116, 144, 0.1) 70%, transparent 70.5%);
+  background-size: 200px 200px;
+  background-position: 0 0, 100px 0, 0 100px, 100px 100px;
+  pointer-events: none;
+}
+
+/* Islamic Star Pattern */
+.star-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at center, rgba(16, 185, 129, 0.2) 2px, transparent 2px);
+  background-size: 40px 40px;
+  opacity: 0.3;
+}
+
+/* Enhanced Islamic Geometric Borders */
+.islamic-border {
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(45deg, #10b981, #0e7490, #10b981) border-box;
+}
+
+/* Animated Prayer Time Indicators */
+.prayer-indicator {
+  position: relative;
+}
+
+.prayer-indicator::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.8) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  animation: pulse-prayer 2s infinite;
+}
+
+@keyframes pulse-prayer {
+  0%, 100% {
+    opacity: 0.4;
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.2);
+  }
+}
+
+/* Islamic Calligraphy Enhancement */
+.calligraphy-text {
+  font-family: 'Scheherazade New', serif;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
+}
+
+/* Gradient Text for Headers */
+.gradient-text {
+  background: linear-gradient(135deg, #10b981, #0e7490, #059669);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Islamic Tile Pattern for Cards */
+.islamic-tile {
+  background: 
+    linear-gradient(45deg, transparent 25%, rgba(16, 185, 129, 0.05) 25%, rgba(16, 185, 129, 0.05) 75%, transparent 75%),
+    linear-gradient(-45deg, transparent 25%, rgba(14, 116, 144, 0.05) 25%, rgba(14, 116, 144, 0.05) 75%, transparent 75%);
+  background-size: 20px 20px;
+}
+
+/* Enhanced Button Styles with Islamic Theme */
+.islamic-button {
+  background: linear-gradient(135deg, #10b981 0%, #0e7490 100%);
+  box-shadow: 
+    0 4px 15px rgba(16, 185, 129, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.islamic-button:hover {
+  background: linear-gradient(135deg, #059669 0%, #0c5b6b 100%);
+  box-shadow: 
+    0 8px 25px rgba(16, 185, 129, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Mosque Silhouette Pattern */
+.mosque-pattern {
+  background-image: 
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L50 20v40H10V20L30 0z' fill='none' stroke='rgba(16,185,129,0.1)' stroke-width='1'/%3E%3Ccircle cx='30' cy='15' r='3' fill='rgba(16,185,129,0.1)'/%3E%3C/svg%3E");
+  background-size: 60px 60px;
+  opacity: 0.3;
+}
+
+/* Animasi untuk komponen */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slideIn {
+  animation: slideIn 0.5s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Responsive design improvements */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .text-3xl {
+    font-size: 1.5rem;
+  }
+  
+  .text-4xl {
+    font-size: 1.875rem;
+  }
+  
+  .p-6 {
+    padding: 1rem;
+  }
+  
+  .space-y-8 > * + * {
+    margin-top: 1.5rem;
+  }
+  
+  .grid-cols-1.md\:grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .lg\:col-span-2 {
+    grid-column: span 1;
+  }
+  
+  .max-w-7xl {
+    max-width: 100%;
+  }
+  
+  .arabic-font {
+    font-size: 1.25rem;
+  }
+}
+
+/* Responsive Islamic Typography */
+@media (max-width: 768px) {
+  .arabic-font {
+    font-size: 0.9em;
+  }
+  
+  .calligraphy-text {
+    font-size: 1.1em;
+  }
+  
+  .islamic-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .islamic-pattern-overlay {
+    opacity: 0.02;
+  }
+}
+
+/* Touch-friendly buttons for mobile */
+@media (hover: none) {
+  .islamic-button:hover {
+    background: linear-gradient(135deg, #10b981 0%, #0e7490 100%);
+    transform: none;
+  }
+  
+  .islamic-button:active {
+    transform: scale(0.98);
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .islamic-pattern-overlay {
+    display: none;
+  }
+  
+  .bg-emerald-50 {
+    background-color: white;
+    border: 2px solid #10b981;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fadeIn,
+  .animate-slideIn,
+  .animate-pulse {
+    animation: none;
+  }
+  
+  .prayer-beads {
+    animation: none;
+  }
+  
+  .transition-all,
+  .transition-colors,
+  .transition-transform {
+    transition: none;
+  }
+}
+
+/* Prayer Bead Animation */
+@keyframes prayer-beads {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.prayer-beads {
+  animation: prayer-beads 20s linear infinite;
+}
+
+/* Improved focus states for accessibility */
+.focus\:ring-2:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  ring-width: 2px;
+  ring-color: #10b981;
+}
+
+/* Better button states */
+.islamic-button:focus {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+}
+
+.islamic-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Islamic Green Accent Colors */
+:root {
+  --islamic-green: #10b981;
+  --islamic-teal: #0e7490;
+  --islamic-gold: #f59e0b;
+  --islamic-navy: #1e3a8a;
+  --islamic-white: #ffffff;
+  --islamic-gray: #f3f4f6;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --islamic-white: #1f2937;
+    --islamic-gray: #374151;
+  }
+}
+
+/* Subtle Geometric Background for Cards */
+.geometric-bg {
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(14, 116, 144, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(16, 185, 129, 0.03) 0%, transparent 50%);
+}
